@@ -9,3 +9,4 @@ Setting: Medieval Times/ Fantasy
 
 
 ##design
+Have an energy bar, for every turn you take, the enrgy bar goes down. You can replenish with food or certain items
