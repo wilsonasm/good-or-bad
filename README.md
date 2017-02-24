@@ -3,7 +3,7 @@
 MATLAB text-interface rpg
 
 ##storyline
-
+Setting: Medieval Times/ Fantasy
 
 
 ##design
