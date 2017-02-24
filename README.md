@@ -3,7 +3,8 @@
 MATLAB text-interface rpg
 
 ##storyline
-Setting: Medieval Times/ Fantasy \n
+Setting: Medieval Times/ Fantasy
+
 3 different stories?
 
 
