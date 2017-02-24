@@ -1,0 +1,19 @@
+ENGR-122-076 Final Project Proposal
+
+
+Team Members: Shaumik Ashraf, Markus Wilson, Quan Nguyen 
+Date: Friday, Feb. 10, 2017
+
+
+Utilizes:
+* Loops
+* String Manipulation
+* Plots
+* Function Handles
+* Probability
+
+
+Description: 
+The project consists of a text-based game where the user will be presented various options in response to an event. Based on the response of the user, there will be multiple outcomes and multiple answers. The code will utilize functions as well as random variable generator in order to have a more diverse range of events and endings. For each event, the player will have to consider two resources, health and food, where each decision will impact each resource differently. Each turn food will be consumed or health will be lowered. If health reaches zero player loses. In addition to this, each user response will be graded as bad, neutral, or good. Afterwards, The game will then plot out the outcome of the player’s decisions and reveal the player’s traits in terms of their answers.
+Each group member will contribute in a certain storyline with different outcomes and progressions. Flowcharts and storyboards to guide the game will be developed by all members before coding. Along with this, each group member will be responsible for coding an implementation of specific events and aspects into the project. Overall, the coding of the story and interaction between the events will be worked on by all group members.
+        An algorithm for easily swapping out events with another while keeping track of the player’s past decisions and resources will have to be developed. This may be implemented using function handles, a tree structure, or another method that must be decided.
