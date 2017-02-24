@@ -4,8 +4,8 @@ MATLAB text-interface rpg
 
 ##storyline
 Setting: Medieval Times/ Fantasy
-Items: Magic potion, food, miscellaneous
-Player: Man (Good)/ Beast (Bad)
+\nItems: Magic potion, food, miscellaneous
+\nPlayer: Man (Good)/ Beast (Bad)
 
 
 Main Story Line: 
