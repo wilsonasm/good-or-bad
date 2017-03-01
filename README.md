@@ -8,10 +8,10 @@ Setting: Medieval Times/ Fantasy
 \nPlayer: Man (Good)/ Beast (Bad)
 
 
-Main Story Line: 
+Main Story Line: A valiant hero was taught a the chilvalry school of Drexel that this world has endless bounties, quests, and danger. Upon graduation the hero realizes that he has six paths to choose from that well either deem him wothy or praise, or sleep amongst the rats for his cruel acts.
 Shaumik's Tale:
 Quan's Tale:
-Markus' Tale:
+Markus' Tale: 
 
 
 ##design
