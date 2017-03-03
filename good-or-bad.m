@@ -40,7 +40,7 @@ item(1)
 event_id = 0;
 event_fh = @first_event;
 
-while( event_id!=100 )
+while( event_id~=100 )
 
   next_event_id = event_fh(Player, item);
   
