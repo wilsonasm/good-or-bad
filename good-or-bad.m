@@ -16,6 +16,9 @@ lebow_event   id=40
 shaft_event   id=50   //bandit/thief route
 kelly_event   id=60
 
+final_event   id=90   //dragon event
+
+done          id=100
 %}
 
 player_name = input('What is your name?');
@@ -65,9 +68,15 @@ while( event_id~=100 )
     case 60
       event_fh = @kelly_event;
       
+    case 90
+      event_fh = @final_event;
+      
+    case 100
+      %game done
     otherwise
       fprintf('Error, event_id unrecognized %i', next_event_id);
   end  %close switch
+  
   event_id = next_event_id;
 
 end    %close while loop
