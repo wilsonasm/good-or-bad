@@ -12,11 +12,14 @@ function [success, player] = useItem(player, item_no, item_db)
 
   success = false;
   inv = player.inventory;
-  for( iv= 1:length(inv) )
+  for( i= 1:length(inv) )
     if( item_no==inv(i) && ~success )
       success = true;
       inv(i) = 0;
-      player.effect = player.effect + item_db(item_no).energyEffect;
+      player.energy = player.energy + item_db(item_no).energyEffect;
+      if( player.energy > 10 )
+          player.energy = 10;
+      end
       fprintf('%s used %s; %s now has %i energy.\n', player.name, item_db(item_no).name, player.name, player.effect);
     end
   end

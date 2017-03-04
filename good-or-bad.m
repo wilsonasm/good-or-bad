@@ -11,10 +11,12 @@ disque_event  id=10   //recruit route
 randell_event id=20
 
 curtis_event  id=30   //mercenary route
-lebow_event   id=40
+
 
 shaft_event   id=50   //bandit/thief route
 kelly_event   id=60
+
+secret_event  id=80
 
 final_event   id=90   //dragon event
 
@@ -29,13 +31,13 @@ Player = struct('name', player_name,
                 'moralCounter', 0);
 
 %item database
-item_database(10) = struct('name', 'potion', 'energyEffect', 5);
-item_database(9)  = struct('name', 'poison', 'energyEffect', -5);
-item_database(8)  = struct('name', 'pebble', 'energyEffect', 0);
+item_database(10) = struct('name', 'potion',    'energyEffect', 5);
+item_database(9)  = struct('name', 'poison',    'energyEffect', -5);
+item_database(8)  = struct('name', 'pebble',    'energyEffect', 0);
 %create these:
-item_database(7)
-item_database(6)
-item_database(5)
+item_database(7)  = struct('name', 'sword',     'energyEffect', 0);
+item_database(6)  = struct('name', 'leftovers', 'energyEffect', 2);
+item_database(5)  = struct('name', 'food',      'energyEffect', 4);
 item_database(4)
 item_database(3)
 item_database(2)
@@ -46,7 +48,7 @@ event_fh = @first_event;
 
 while( event_id~=100 )
 
-  next_event_id = event_fh(Player, item_database);
+  [next_event_id, Player] = event_fh(Player, item_database);
   
   switch(next_event_id)  %insert more event_id cases as needed
     case 0
@@ -63,12 +65,15 @@ while( event_id~=100 )
     case 40
       event_fh = @lebow_event;
 
-    case 50:
+    case 50
       event_fh = @shaft_event;
 
     case 60
       event_fh = @kelly_event;
       
+    case 80:
+      event_fh = @secret_event;
+        
     case 90
       event_fh = @final_event;
       
