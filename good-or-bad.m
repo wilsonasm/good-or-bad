@@ -2,7 +2,7 @@
 %matlab script file
 
 %required functions (events):
-%returns id of next function, takes Player and items struct as parameters
+%format: [next_event_id, Player] = event(Player, item);
 %add events to this list as needed!
 %{
 first_event   id=0
@@ -27,24 +27,26 @@ Player = struct('name', player_name,
                 'energy', 10, 
                 'inventory', [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 'moralCounter', 0);
-item(10) = struct('name', 'potion', 'energyEffect', 5);
-item(9)  = struct('name', 'poison', 'energyEffect', -5);
-item(8)  = struct('name', 'pebble', 'energyEffect', 0);
+
+%item database
+item_database(10) = struct('name', 'potion', 'energyEffect', 5);
+item_database(9)  = struct('name', 'poison', 'energyEffect', -5);
+item_database(8)  = struct('name', 'pebble', 'energyEffect', 0);
 %create these:
-item(7)
-item(6)
-item(5)
-item(4)
-item(3)
-item(2)
-item(1)
+item_database(7)
+item_database(6)
+item_database(5)
+item_database(4)
+item_database(3)
+item_database(2)
+item_database(1)
 
 event_id = 0;
 event_fh = @first_event;
 
 while( event_id~=100 )
 
-  next_event_id = event_fh(Player, item);
+  next_event_id = event_fh(Player, item_database);
   
   switch(next_event_id)  %insert more event_id cases as needed
     case 0
