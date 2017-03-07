@@ -38,7 +38,7 @@ item_database(8)  = struct('name', 'pebble',    'energyEffect', 0);
 item_database(7)  = struct('name', 'sword',     'energyEffect', 0);
 item_database(6)  = struct('name', 'leftovers', 'energyEffect', 2);
 item_database(5)  = struct('name', 'food',      'energyEffect', 4);
-item_database(4)
+item_database(4)  = struct('name', 'gold');
 item_database(3)
 item_database(2)
 item_database(1)
@@ -61,7 +61,8 @@ while( event_id~=100 )
 
     case 30
       event_fh = @curtis_event;
-
+    case 31
+      event_fh = @Larry_event
     case 40
       event_fh = @lebow_event;
 
