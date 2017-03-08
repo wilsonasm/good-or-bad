@@ -16,3 +16,19 @@ Markus' Tale:
 
 ##design
 Have an energy bar, for every turn you take, the enrgy bar goes down. You can replenish with food or certain items
+
+#How to git
+
+git pull
+
+<EDIT YOUR STUFF>
+
+git pull <AGAIN>
+
+git add --all
+
+git commit -m "<PUT MESSAGE HERE>"
+
+git push
+
+<DONE>
