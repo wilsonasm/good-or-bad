@@ -30,7 +30,7 @@ function [next_event_id, player] = first_event(player, item_db)
     
     incorrect = true;
     while( incorrect )
-        in = input('>>');
+        in = input('>>','s');
         if( strcmpi(in, 'Disque') )
             next_event_id = 10;
             incorrect = false;

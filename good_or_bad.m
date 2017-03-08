@@ -11,7 +11,9 @@ disque_event  id=10   //recruit route
 randell_event id=20
 
 curtis_event  id=30   //mercenary route
-
+larry_event   id=32
+barbarian_event id = 33
+mountain_event id = 34
 
 shaft_event   id=50   //bandit/thief route
 shaft2_event  id=51
@@ -24,12 +26,9 @@ final_event   id=90   //dragon event
 done          id=100
 %}
 
-player_name = input('What is your name?');
+player_name = input('What is your name?\n','s');
 
-Player = struct('name', player_name, 
-                'energy', 10, 
-                'inventory', [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                'moralCounter', 0);
+Player = struct('name', player_name, 'energy', 10, 'inventory', [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],'moralCounter', 0);
 
 %item database
 item_database(10) = struct('name', 'potion',    'energyEffect', 5);
@@ -39,7 +38,7 @@ item_database(8)  = struct('name', 'pebble',    'energyEffect', 0);
 item_database(7)  = struct('name', 'sword',     'energyEffect', 0);
 item_database(6)  = struct('name', 'leftovers', 'energyEffect', 2);
 item_database(5)  = struct('name', 'food',      'energyEffect', 4);
-item_database(4)  = struct('name', 'gold');
+item_database(4)  = struct('name', 'gold','energyEffect',0);
 item_database(3)
 item_database(2)
 item_database(1)
@@ -62,8 +61,12 @@ while( event_id~=100 )
 
     case 30
       event_fh = @curtis_event;
-    case 31
-      event_fh = @Larry_event
+    case 32
+      event_fh = @larry_event;
+    case 33
+      event_fh = @barbarian_event;
+    case 34
+      event_fh = @mountain_event;
     case 40
       event_fh = @lebow_event;
 
@@ -73,7 +76,7 @@ while( event_id~=100 )
     case 60
       event_fh = @kelly_event;
       
-    case 80:
+    case 80
       event_fh = @secret_event;
         
     case 90
