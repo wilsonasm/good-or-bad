@@ -14,6 +14,7 @@ curtis_event  id=30   //mercenary route
 
 
 shaft_event   id=50   //bandit/thief route
+shaft2_event  id=51
 kelly_event   id=60
 
 secret_event  id=80
