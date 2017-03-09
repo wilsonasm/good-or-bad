@@ -1,4 +1,4 @@
-function [next_event_id, player] = kellyC_event(player, item_database)
+function [next_event_id, Player] = kellyC_event(Player, item_database)
 {
 fprintf('You reach Kelly Cave: a gruesome place filled with horror.\n')
 fprintf('You notcied a shimmering light far into the cave and\n')
@@ -8,8 +8,8 @@ fprintf('A giant slug stands in your way of your path.\n')
 r= rand()*100;
 if (r <50)
     
-player.energy = player.enery-4;
-fprintf('healthbar %s \n', player.energy)
+Player.energy = Player.enery-4;
+fprintf('healthbar %s \n', Player.energy)
 fprintf('That fight took a great deal out of you, you are\n')
 fprintf('quite lucky to still be alive\n')
 
