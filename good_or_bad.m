@@ -19,6 +19,7 @@ shaft_event   id=50   //thief route
 shaft_ambush_event  id=51
 thief_gold_event   id=53
 thief_starve_event id=54
+thief_mountain_event id=55
 
 kelly_event   id=60
 
@@ -37,14 +38,14 @@ Player = struct('name', player_name, 'energy', 10, 'inventory', [0, 0, 0, 0, 0, 
 item_database(10) = struct('name', 'potion',    'energyEffect', 5);
 item_database(9)  = struct('name', 'poison',    'energyEffect', -5);
 item_database(8)  = struct('name', 'pebble',    'energyEffect', 0);
-%create these:
 item_database(7)  = struct('name', 'sword',     'energyEffect', 0);
 item_database(6)  = struct('name', 'leftovers', 'energyEffect', 2);
 item_database(5)  = struct('name', 'food',      'energyEffect', 4);
 item_database(4)  = struct('name', 'gold',      'energyEffect', 0);
-item_database(3)
-item_database(2)
-item_database(1)
+%create these:
+%item_database(3)
+%item_database(2)
+%item_database(1)
 
 event_id = 0;
 event_fh = @first_event;
@@ -59,7 +60,7 @@ while( event_id~=100 )
     case 10
       event_fh = @disque_event;
       
- case 11
+    case 11
       event_fh= @kellyC_event;
     
     case 12

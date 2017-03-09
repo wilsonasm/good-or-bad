@@ -1,6 +1,6 @@
 function [next_event_id, player] = shaft_ambush_event(player, item_db)
 
-    earn_potion = false;
+    earned_potion = false;
     input_incorrect = true;
     
     fprintf('You find the shaft quite and ominous. Your usually sharp senses\n');
@@ -22,7 +22,7 @@ function [next_event_id, player] = shaft_ambush_event(player, item_db)
         fprintf('you and disarms you as you try to counter. For some reason\n');
         fprintf('he spares you.\n\n');
         
-        earn_potion = true;
+        earned_potion = true;
         player.energy = player.energy - 3;
         next_event_id = 53;
     elseif( r < 95 )  %die
@@ -43,7 +43,7 @@ function [next_event_id, player] = shaft_ambush_event(player, item_db)
         fprintf('disarmed. You are both breathing heavily, and the enemy\n');
         fprintf('sheathes his daggers.\n\n');
         
-        earn_potion = true;
+        earned_potion = true;
         player.energy = player.energy - 1;
         next_event_id = 53;
     end
@@ -65,7 +65,7 @@ function [next_event_id, player] = shaft_ambush_event(player, item_db)
        
        while( input_incorrect )
           fprintf('(Yes or no)\n');
-          in = input('>>');
+          in = input('>>', 's');
           
           if( strcmpi(in, 'yes') )
              input_incorrect = false;
@@ -79,5 +79,5 @@ function [next_event_id, player] = shaft_ambush_event(player, item_db)
        end
     end
     
-    fprintf('Health remaining: %i\n\n', player.energy);
+    fprintf('\nHealth remaining: %i\n\n', player.energy);
 end

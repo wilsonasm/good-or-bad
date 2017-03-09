@@ -8,10 +8,10 @@ function [next_event_id, player] = shaft_event(player, item_db)
     fprintf('go on. Along the way you find a peculiar pebble in the path.\n\n');
     
     fprintf('Do you pick up the pebble?\n') 
-    fprintf('(>> indicates case-insensitive string input required)\n');
-    
+      
     while( 1==1 )
-        pick_up = input('>>');
+        fprintf('(Yes or no)\n');
+        pick_up = input('>>', 's');
         
         if( strcmpi(pick_up, 'yes') )
             [~, player] = giveItem(player, 8, item_db); 
@@ -27,7 +27,7 @@ function [next_event_id, player] = shaft_event(player, item_db)
     fprintf('eventually reach the shaft at nightfall.\n\n');
     
     player.energy = player.energy - 1;
-    fprintf('Health remaining: %i\n\n', player.energy);
+    fprintf('Energy remaining: %i\n\n', player.energy);
     
     next_event_id = 51;
 
