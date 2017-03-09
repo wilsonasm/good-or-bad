@@ -21,6 +21,13 @@ frpintf('survive against the slime, let alone come out unscathed \n')
 fprintf('But now that you have the gold will your eturn it to the traveler \n')
 fprintf('or keep it all to yourself\n Keep or Give \n')
 
+while (1==1)
+{
+ dec= input('>>')
+ 
+ if (
+}
+
 
 next_event_id = 12;
 }
