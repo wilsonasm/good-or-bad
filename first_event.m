@@ -2,6 +2,8 @@
 
 function [next_event_id, player] = first_event(player, item_database)
 
+    player.energy = 10;
+
     fprintf('%s, welcome to Drexel Village\n', player.name);
     fprintf('You just graduated from the Drexel School of Chivalry\n');
     fprintf('... at the bottom of your class.\n');

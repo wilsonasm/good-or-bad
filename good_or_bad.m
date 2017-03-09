@@ -15,8 +15,11 @@ larry_event   id=32
 barbarian_event id = 33
 mountain_event id = 34
 
-shaft_event   id=50   //bandit/thief route
-shaft2_event  id=51
+shaft_event   id=50   //thief route
+shaft_ambush_event  id=51
+thief_gold_event   id=53
+thief_starve_event id=54
+
 kelly_event   id=60
 
 secret_event  id=80
@@ -88,7 +91,13 @@ while( event_id~=100 )
 
     case 50
       event_fh = @shaft_event;
-
+    case 51
+      event_fh = @shaft_ambush_event;
+    case 53
+      event_fh = @thief_gold_event;
+    case 54
+      event_fh = @thief_starve_event;
+      
     case 60
       event_fh = @kelly_event;
       

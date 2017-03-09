@@ -69,10 +69,9 @@ function [next_event_id, player] = shaft_ambush_event(player, item_db)
           
           if( strcmpi(in, 'yes') )
              input_incorrect = false;
-             next_event_id = 53;
+         
           elseif( strcmpi(in, 'no') )
-             input_incorrect = false;
-             next_event_id = 54;
+              
           else
               fprintf('Invalid input. Try again.\n');
           end
