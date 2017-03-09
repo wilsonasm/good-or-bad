@@ -10,7 +10,7 @@ answer = input('What will you do? \nHelp or Leave?\n>>','s');
         elseif chances == 6
             fprintf ('You helped defeat the bandits, although you were hurt and lost 1 energy in the process.\nYou are sent back to get Larry')
             Player.energy = Player.energy -1;
-            next_event_id = 35;
+            next_event_id = 90; %Final Dragon
         elseif chances == 7
             fprintf('You were able to fend off the bandits, although taking quite some damage and losing 2 energy.\n You were told to bring back Larry')
             Player.energy = Player.energy-2;
@@ -21,6 +21,6 @@ answer = input('What will you do? \nHelp or Leave?\n>>','s');
             next_event_id = 200;
         end
     elseif strcmpi(answer,'leave')
-        next_event_id=35; %Final Dragon
+        next_event_id=90; %Final Dragon
     end
 end

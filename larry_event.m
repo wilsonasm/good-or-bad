@@ -18,6 +18,7 @@ fprintf ('Larry says "Hello %s I was told you would be coming, did you happen to
             fprintf('Sorry I didn''t recognize what you said, please repeat that?\n')
             input1_incorrect = true;
         end
+    end   
         fprintf ('\nAnyway! I have a quest for you %s, climb to the mountain and\n',Player.name)
         fprintf ('defeat the bandits, they are terrorizing my clan!\n')
         fprintf('\nYou decide to help larry No one else but you can stand up to the bandits \n')

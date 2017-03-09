@@ -1,5 +1,6 @@
 function [next_event_id, Player] = barbarian_event(Player, item_database)
 fprintf ('On your way to the mountain you see giant claw marks and prints\n')
+
 answer = input('Do you wish to examine them?\n Yes or No?\n>>','s')
     if strcmpi(answer, 'yes')
         fprintf ('You see they are dragon marks and realize danger is not far\n')

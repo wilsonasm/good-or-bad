@@ -52,7 +52,7 @@ function [next_event_id, Player] = curtis_event(Player, item_database)
             fprintf ('Congratulations you killed the slime and retrieved the gold but you lost 1 energy\n');
             Player.energy = Player.energy-1;
             next_event_id = 32; %larry_event;
-            giveItem(Player, 4,item_database)
+            giveItem(Player, 4,item_database);
             %give gold to players
         elseif chances == 7
             fprintf ('Congratulations you killed the slime and retrieved the gold but the slime attacked you and you lost 2 energy\n')
@@ -64,12 +64,13 @@ function [next_event_id, Player] = curtis_event(Player, item_database)
             fprintf ('Congratulations you killed the slime and retrieved the gold but at a cost, you lost 3 energy in the process\n')
             Player.energy = Player.energy-3;
             next_event_id = 32; %larry_event
+            giveItem(Player, 4,item_database);
             %give gold to players
         elseif chances == 9
             fprintf ('Congratulations you killed the slime and retrieved the gold but were wounded pretty badly, you lost 4 energy\n')
             Player.energy = Player.energy-5;
             next_event_id = 32; %larry_event
-            giveItem(Player, 4,item_database)
+            giveItem(Player, 4,item_database);
             %give gold to players
         elseif chances == 10
             fprintf ('You have been killed by the slime, guess you werent as mighty a warrior as previosly thought\n')
