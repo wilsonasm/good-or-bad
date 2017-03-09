@@ -14,7 +14,7 @@ function [next_event_id, player] = Disque_event(player, item_database)
             next_event_id = 11;
             break;
         elseif( strcmpi(answer, 'no') )
-            fprintf('Traveler: No worries, I'm sure another Knight shall aid me\n');
+            fprintf('Traveler: No worries, I am sure another Knight shall aid me\n');
             next_event_id = 12;
             break;
         else
