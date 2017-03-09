@@ -17,6 +17,8 @@ function [next_event_id, player] = thief_mountain_event(player, item_db)
        if( strcmpi(in, 'ambush') )
            incorrect = false;
            player.moralCounter =  player.moralCounter - 3;
+           fprintf('You start making your way up the mountain. After a long\n');
+           fprintf('hike you finally reach the sholder of the mountain.');
            
        elseif( strcmpi(in, 'no') )
            incorrect = false;
@@ -34,10 +36,10 @@ function [next_event_id, player] = thief_mountain_event(player, item_db)
     end
     
     if( ~dead )
-        fprintf('You travel up the mountain, but you once you arrive you find the\n');
-        fprintf('merchants being attacked by a pack of wolves. You can save them,\n');
-        fprintf('rob them in all the confusion, or flee for your own safety.\n');
-        fprintf('What do you do?\n\n');
+        fprintf('You travel up the mountain, but you see the merchants being\n');
+        fprintf('attacked by a pack of wolves. You can save them, rob them\n');
+        fprintf('in all the confusion, or flee for your own safety. What do\n');
+        fprintf('you do?\n\n');
         
         incorrect = true;
         while(incorrect)
@@ -45,17 +47,14 @@ function [next_event_id, player] = thief_mountain_event(player, item_db)
            in = input('>>', 's');
            
            if( strcmpi(in,'save') )
-               incorrect = false;
                fprintf('You somehow manage to save them.');
                player.moralCounter = player.moralCounter + 5;
                player.energy = player.energy - 5;
            elseif( strcmpi(in,'rob') )
-               incorrect = false;
                fprintf('You manage to steal some gold, despite getting injured.\n');
                player.moralCounter = player.moralCounter - 5;
                player.energy = player.energy - 2;
            elseif( strcmpi(in, 'flee') )
-               incorrect = false;
                fprintf('You flee for your life.\n');
                player.moralCounter = player.moralCounter - 2;
                player.energy = player.energy - 3;
