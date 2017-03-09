@@ -56,8 +56,24 @@ while( event_id~=100 )
     case 10
       event_fh = @disque_event;
       
+ case 11
+      event_fh= @kellyC_event;
+    
+    case 12
+      event_fh= @fightFH_event;
+    
+    case 13
+      event_fh= @theHunt_event;
+    
+    case 15
+      event_fh= @mountTop_event;
+      
     case 20
       event_fh = @randell_event;
+    
+    case 21
+      event_fh= @ambush_event;
+      
 
     case 30
       event_fh = @curtis_event;
