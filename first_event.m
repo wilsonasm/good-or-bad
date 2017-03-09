@@ -24,19 +24,15 @@ function [next_event_id, player] = first_event(player, item_database)
     fprintf('Just remember that your choices determine who you are.\n\n');
     
     fprintf('Where do you want to go?\n');
-    fprintf('Disque\n');
     fprintf('Randell\n');
     fprintf('Curtis\n');
     fprintf('Shaft\n');
-    fprintf('Kelly\n');
+
     
     incorrect = true;
     while( incorrect )
         in = input('>>','s');
-        if( strcmpi(in, 'Disque') )
-            next_event_id = 10;
-            incorrect = false;
-        elseif( strcmpi(in, 'Randell') )
+        if( strcmpi(in, 'Randell') )
             next_event_id = 20;
             incorrect = false;
         elseif( strcmpi(in, 'Curtis') )
@@ -44,9 +40,6 @@ function [next_event_id, player] = first_event(player, item_database)
             incorrect = false;
         elseif( strcmpi(in, 'Shaft') )
             next_event_id = 50;
-            incorrect = false;
-        elseif( strcmpi(in, 'Kelly') )
-            next_event_id = 60;
             incorrect = false;
         elseif( strcmpi(in, 'Secret') )
             next_event_id = 80;

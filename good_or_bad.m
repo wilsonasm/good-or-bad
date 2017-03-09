@@ -21,9 +21,7 @@ thief_gold_event   id=53
 thief_starve_event id=54
 thief_mountain_event id=55
 
-kelly_event   id=60
-
-secret_event  id=80
+secret_event  id=80  //just for fun, don't try
 
 final_event   id=90   //dragon event
 Game_Over     id=200 Game Over Event
@@ -87,8 +85,6 @@ while( event_id~=100 )
       event_fh = @barbarian_event;
     case 34
       event_fh = @mountain_event;
-    case 40
-      event_fh = @lebow_event;
 
     case 50
       event_fh = @shaft_event;
@@ -100,9 +96,7 @@ while( event_id~=100 )
       event_fh = @thief_starve_event;
     case 55
       event_fh = @thief_mountain_event;
-    case 60
-      event_fh = @kelly_event;
-      
+
     case 80
       event_fh = @secret_event;
         
@@ -114,7 +108,7 @@ while( event_id~=100 )
     case 200
       event_fh = @Game_Over;
     otherwise
-      fprintf('Error, event_id unrecognized %i', next_event_id);
+      fprintf('Error, event_id unrecognized %i\n', next_event_id);
   end  %close switch
   
   event_id = next_event_id;
