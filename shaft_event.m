@@ -16,7 +16,7 @@ function [next_event_id, player] = shaft_event(player, item_db)
         if( strcmpi(pick_up, 'yes') )
             [~, player] = giveItem(player, 8, item_db); 
             break;
-        elseif( strcmpi(pickup, 'no') )
+        elseif( strcmpi(pick_up, 'no') )
             fprintf('You ignore the pebble.\n\n');
             break;
         else
