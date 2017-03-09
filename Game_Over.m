@@ -13,6 +13,8 @@ function [next_event_id, player] = Game_Over(player, item_database)
     answer = input ('Restart or End?\n>>','s');
     if strcmpi (answer,'Restart')
         next_event_id = 0;
+        player.moralCounter = 0;
+        player.inventory = [0,0,0,0,0,0,0,0,0,0];
     else
         fprintf ('\nGG; Well Played.\n\n');
         next_event_id = 100;
