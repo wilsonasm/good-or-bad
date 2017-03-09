@@ -11,18 +11,16 @@ function [next_event_id, player] = Disque_event(player, item_database)
         if( strcmpi(answer, 'yes') )
             fprintf('Traveler: Thank you so much\n'); 
             fprintf('The travel warns you that the theif took off into the direction of Kelly Cave\n');
+            next_event_id = 11;
             break;
         elseif( strcmpi(answer, 'no') )
             fprintf('Traveler: No worries, I'm sure another Knight shall aid me\n');
+            next_event_id = 12;
             break;
         else
             fprintf('Invalid input. Enter either yes or no.\n');
         end
     end
-    
-    player.energy = player.energy - 1;
-    fprintf('Health remaining: %i\n\n', player.energy);
-    
-    next_event_id = 51;
+     
 
 }
