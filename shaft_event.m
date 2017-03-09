@@ -7,7 +7,7 @@ function [next_event_id, player] = shaft_event(player, item_db)
     fprintf('land. You are fully aware of these rumors but you decide to\n');
     fprintf('go on. Along the way you find a peculiar pebble in the path.\n\n');
     
-    fprintf('Do you pick up the pebble?\n' 
+    fprintf('Do you pick up the pebble?\n') 
     fprintf('(>> indicates case-insensitive string input required)\n');
     
     while( 1==1 )

@@ -1,12 +1,12 @@
 %first_event
 
-function [next_event_id, player] = first_event(player, item_db)
+function [next_event_id, player] = first_event(player, item_database)
 
     fprintf('%s, welcome to Drexel Village\n', player.name);
     fprintf('You just graduated from the Drexel School of Chivalry\n');
     fprintf('... at the bottom of your class.\n');
-    [~, player] = giveItem(player, 7, item_db);  %giv sword
-    [~, player] = giveItem(player, 6, item_db);  %giv food
+    [~, player] = giveItem(player, 7, item_database);  %giv sword
+    [~, player] = giveItem(player, 6, item_database);  %giv food
     fprintf('You only have a sword as your diploma and some leftovers.\n');
     fprintf('They will be a useful tools for fending off enemies,\n');
     fprintf('but will not fill an empty stomach forever. You need to get a job.\n');
@@ -41,10 +41,10 @@ function [next_event_id, player] = first_event(player, item_db)
             next_event_id = 30;
             incorrect = false;
         elseif( strcmpi(in, 'Shaft') )
-            next_event_id = 40;
+            next_event_id = 50;
             incorrect = false;
         elseif( strcmpi(in, 'Kelly') )
-            next_event_id = 50;
+            next_event_id = 60;
             incorrect = false;
         elseif( strcmpi(in, 'Secret') )
             next_event_id = 80;

@@ -22,7 +22,7 @@ kelly_event   id=60
 secret_event  id=80
 
 final_event   id=90   //dragon event
-
+Game_Over     id=200 Game Over Event
 done          id=100
 %}
 
@@ -38,7 +38,7 @@ item_database(8)  = struct('name', 'pebble',    'energyEffect', 0);
 item_database(7)  = struct('name', 'sword',     'energyEffect', 0);
 item_database(6)  = struct('name', 'leftovers', 'energyEffect', 2);
 item_database(5)  = struct('name', 'food',      'energyEffect', 4);
-item_database(4)  = struct('name', 'gold','energyEffect',0);
+item_database(4)  = struct('name', 'gold',      'energyEffect', 0);
 item_database(3)
 item_database(2)
 item_database(1)
@@ -84,6 +84,8 @@ while( event_id~=100 )
       
     case 100
       %game done
+    case 200
+      event_fh = @Game_Over;
     otherwise
       fprintf('Error, event_id unrecognized %i', next_event_id);
   end  %close switch

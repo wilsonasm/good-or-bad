@@ -8,15 +8,15 @@
 %  end
 %
 
-function [success, player] = giveItem(player, item_no, item_db)
+function [success, Player] = giveItem(Player, item_no, item_db)
 
   success = false;
-  len = length(player.inventory);
+  len = length(Player.inventory);
   for( i = 1:len )
-    if( player.inventory(i)==0 && ~success )
+    if( Player.inventory(i)==0 && ~success )
       success = true;
-      player.inventory(i) = 0;
-      fprintf('%s gained a %s!\n\n', player.name, item_db(item_no).name);
+      Player.inventory(i) = 0;
+      fprintf('%s gained a %s!\n\n', Player.name, item_db(item_no).name);
     end
   end
   

@@ -1,4 +1,4 @@
-function [next_event_id, Player] = curtis_event(Player, item_db)
+function [next_event_id, Player] = curtis_event(Player, item_database)
 %asdfghjkl
 
     fprintf ('As you walk to Curtis Hall, you see a glimmer in Kelly Cave.\n')
@@ -19,6 +19,7 @@ function [next_event_id, Player] = curtis_event(Player, item_db)
                     input2_incorrect = false;
                     battle_slime = true;
                 elseif strcmpi (answer, 'flee')
+                    fprintf('The slime was too scary, you ran away\n')
                     input2_incorrect = false;
                     next_event_id = 32;
                 else
@@ -43,32 +44,38 @@ function [next_event_id, Player] = curtis_event(Player, item_db)
         chances = randi (10);
         if chances < 6
              fprintf('Congratulations you killed the slime and retrieved the gold!\n')
-            Player.inventory = Player.inventory
+            Player.inventory = Player.inventory;
+            giveItem(Player, 4,item_database);
             %give gold to player
-            next_event_id = 32 %larry_event
+            next_event_id = 32; %larry_event
         elseif chances == 6
             fprintf ('Congratulations you killed the slime and retrieved the gold but you lost 1 energy\n');
             Player.energy = Player.energy-1;
             next_event_id = 32; %larry_event;
+            giveItem(Player, 4,item_database)
             %give gold to players
         elseif chances == 7
-            fprintf ('Congratulations you killed the slime and retrieved the gold but the slime attacked you and you lost 2 energy')
-            Player.energy = Player.energy-2
-            next_event_id = 32 %larry_event;
+            fprintf ('Congratulations you killed the slime and retrieved the gold but the slime attacked you and you lost 2 energy\n')
+            Player.energy = Player.energy-2;
+            next_event_id = 32; %larry_event;
+            giveItem(Player, 4,item_database);
             %give gold to players
         elseif chances == 8
-            fprintf ('Congratulations you killed the slime and retrieved the gold but at a cost, you lost 3 energy in the process')
-            Player.energy = Player.energy-3
-            next_event_id = 32 %larry_event
+            fprintf ('Congratulations you killed the slime and retrieved the gold but at a cost, you lost 3 energy in the process\n')
+            Player.energy = Player.energy-3;
+            next_event_id = 32; %larry_event
             %give gold to players
         elseif chances == 9
-            fprintf ('Congratulations you killed the slime and retrieved the gold but were wounded pretty badly, you lost 4 energy')
-            Player.energy = Player.energy-5
-            next_event_id = 32 %larry_event
+            fprintf ('Congratulations you killed the slime and retrieved the gold but were wounded pretty badly, you lost 4 energy\n')
+            Player.energy = Player.energy-5;
+            next_event_id = 32; %larry_event
+            giveItem(Player, 4,item_database)
             %give gold to players
         elseif chances == 10
-            fprintf ('You have been killed by the slime, guess you werent as mighty a warrior as previosly thought \n GAME OVER')
+            fprintf ('You have been killed by the slime, guess you werent as mighty a warrior as previosly thought\n')
             Player.energy = Player.energy-99;
+            next_event_id = 200;
+            %lead to game over event
         else
         end
         

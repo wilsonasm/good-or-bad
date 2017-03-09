@@ -17,10 +17,10 @@ answer = input('What will you do? \nHelp or Leave?\n>>','s');
             next_event_id=35;
         else
             fprintf ('You die fighting the bandits and are left to rot as they looted your body\n')
-            Player.energy = Player.energy-100;
             next_event_id = 200;
+            Player.energy = Player.energy-100;
         end
     elseif strcmpi(answer,'leave')
-        next_event_id=35; %Final Dragon
+        next_event_id=35 %Final Dragon
     end
 end
