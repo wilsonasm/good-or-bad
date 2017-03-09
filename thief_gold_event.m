@@ -7,7 +7,7 @@ function [ next_event_id, player ] = thief_gold_event( player, item_db )
     
     fprintf('You head back to your old school, only this time to rob it.\n');
     fprintf('According to the plan, that mysterious man will cause a commotion\n');
-    fprintf('and in that time you will sneak in and take the goal. As you\n');
+    fprintf('and in that time you will sneak in and take the gold. As you\n');
     fprintf('approach the building you see 5 guards stationed there, and you\n');
     fprintf('decide to wait in a nearby shadow. After a few minutes you hear\n');
     fprintf('a distant gaurd shout: ''Help! Attacker!'' This is your chance\n\n');
