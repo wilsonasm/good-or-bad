@@ -23,7 +23,7 @@ function [next_event_id, Player] = curtis_event(Player, item_database)
                     input2_incorrect = false;
                     next_event_id = 32;
                 else
-                    fprintf('Try again\n');
+                    fprintf('\nTry again\n\n');
                     input2_incorrect = true;
                 end %end ladder
             end  %end input2 loop
@@ -34,7 +34,7 @@ function [next_event_id, Player] = curtis_event(Player, item_database)
             fprintf('You leave the cave alone.\n');
             next_event_id = 32; %larry_event
         else
-            fprintf('Sorry I didn''t recognize what you said, please repeat that?\n')
+            fprintf('\nSorry I didn''t recognize what you said, please repeat that?\n\n')
             input1_incorrect = true;
         end %ends if statement for cave
     end   %close first input loop

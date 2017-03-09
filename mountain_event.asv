@@ -1,10 +1,10 @@
 function [next_event_id, Player] = mountain_event(Player, item_database)
 fprintf ('You reach the bandits and the clan''s temple and see a skirmish happening')
-input1_incorrect = true;
+input1_incorrect = true
+input2_incorrect = true
     while input1_incorrect
         answer = input('What will you do? \nHelp or Leave?\n>>','s');
             if strcmpi (answer, 'Help')
-                input1_incorrect = false; 
                 Player.moralCounter = Player.moralCounter+1;
                 chances = randi(10);
                 if chances <6
@@ -24,11 +24,7 @@ input1_incorrect = true;
                     next_event_id = 200;
                 end
             elseif strcmpi(answer,'leave')
-                input1_incorrect = false;
                 next_event_id=90; %Final Dragon
-            else
-                 fprintf('\nSorry I didn''t recognize what you said, please repeat that?\n\n')
-                 input1_incorrect = true;
             end
     end
 end
