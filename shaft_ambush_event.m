@@ -79,5 +79,5 @@ function [next_event_id, player] = shaft_ambush_event(player, item_db)
        end
     end
     
-    fprintf('\nHealth remaining: %i\n\n', player.energy);
+    fprintf('\nEnergyremaining: %i\n\n', player.energy);
 end

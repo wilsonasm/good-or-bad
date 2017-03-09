@@ -35,7 +35,7 @@ function [ next_event_id, player ] = thief_starve_event( player, item_db )
         end
         
     else %no gold
-        fprintf('You are tired and staring this night. You decide to\n');
+        fprintf('You are tired and starving this night. You decide to\n');
         fprintf('go through what you have so far.\n');
         
         if( hasItem(player, 5, item_db) )

@@ -27,6 +27,7 @@ function [next_event_id, player] = thief_mountain_event(player, item_db)
            fprintf('all the guards hunting you for a few days, but eventually\n');
            fprintf('there ruthlessness and your weakening energy get to you.\n');
            fprintf('You die.\n\n');
+           dead = true;
            next_event_id = 200;
        else
            fprintf('Invalid input. Try again.\n');
