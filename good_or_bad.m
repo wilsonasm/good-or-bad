@@ -98,7 +98,8 @@ while( event_id~=100 )
       event_fh = @thief_gold_event;
     case 54
       event_fh = @thief_starve_event;
-      
+    case 55
+      event_fh = @thief_mountain_event;
     case 60
       event_fh = @kelly_event;
       
