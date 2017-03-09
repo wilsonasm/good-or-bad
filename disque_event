@@ -1,9 +1,0 @@
-function [next_event_id, player] = Disque_event(player, item_db)
-{
-  fprintf("As you travel along to the Great Hall of Disque you encounter a worry traveler\n")
-  fprintf("You approach him and find out that his only gold has been stolen by a theif\n")
-  fprintf("He asks you, as a valiant knight, if you can retrieve his gold for him\n")
-  fprintf("Do you accept?\n Yes or No\n")
-  
-
-}
