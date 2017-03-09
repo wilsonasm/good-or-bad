@@ -23,8 +23,8 @@ while input1_incorrect
                                         fprintf('Congratulations! You killed the dragon!\n')
                                         fprintf('You are crowned a hero and savior of the people, worshipped \nand revered as a legend all throught time \n for corageously defeating the dragon\n')
                                         next_event_id = 200
-                                    else chances > 5
-                                        fprintf ('\nSorry, you died a hero. Although no one was there to witness it, your courage goes unnoticed\n')
+                                    else %chances > 5
+                                        fprintf ('\nSorry, you died a hero. Although your courage goes unnoticed.\n')
                                         next_event_id = 200;
                                         %Go to Game over event
                                     end

@@ -65,14 +65,18 @@ function [next_event_id, player] = thief_mountain_event(player, item_db)
            end
         end
         
-        
+        if( hasItem(player, 10, item_db) )
+           useItem(player, 10, item_db); 
+        end
         
         fprintf('On your way back, you see some large claw marks on the ground\n');
         fprintf('These seem to be actual dragon claw marks. At first you''re in\n');
-        fprintf('disbelief, but soon you here a strong roar. There is a dragon\n');
-        fprintf('heading toward the village...\n\n');
-        %!! run or not here!!!
-       
+        fprintf('disbelief, but soon you here a strong roar. There is a dragon...\n\n');
+        
+        if( ~dead )
+            next_event_id = 90;
+        end
+        
         fprintf('Energy remaining: %i\n\n', player.energy);
         
     end

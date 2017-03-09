@@ -28,8 +28,10 @@ Game_Over     id=200 Game Over Event
 done          id=100
 %}
 
-player_name = input('What is your name?\n','s');
+clc;
+clear all;
 
+player_name = input('What is your name?\n>>','s');
 Player = struct('name', player_name, 'energy', 10, 'inventory', [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],'moralCounter', 0);
 
 %item database
