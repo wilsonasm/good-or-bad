@@ -15,8 +15,10 @@ function [next_event_id, player] = thief_mountain_event(player, item_db)
        in = input('>>','s');
        
        if( strcmpi(in, 'ambush') )
+           %!!!!
            
        elseif( strcmpi(in, 'no') )
+           incorrect = false;
            player.moralCounter = player.moralCounter + 3;
            fprintf('You ignore what the mysterious man said, and decide to\n');
            fprintf('quit the ways of theivery. The next day however, you find\n');
