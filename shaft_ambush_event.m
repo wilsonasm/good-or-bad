@@ -4,9 +4,11 @@ function [next_event_id, player] = shaft_ambush_event(player, item_db)
     fprintf('fail to detect any sign of life, yet you can feel malice and\n');
     fprintf('frustration in the air. After standing tense for 10 minutes\n');
     fprintf('you decide that your fatigue should take priority over caution\n');
-    fprintf('and you start to relax. But you are wrong, you are ambused!\n\n');
+    fprintf('and you start to relax. But you are wrong; you are ambused!\n\n');
     
     r = int32(rand()*100);
+    fprintf('A battle ensues.\n');
+    
     if( r < 10 )  %take no damage
        
     elseif( r < 90 )  %take lots of damage, recieve potion

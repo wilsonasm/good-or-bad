@@ -15,8 +15,9 @@ function [success, Player] = giveItem(Player, item_no, item_db)
   for( i = 1:len )
     if( Player.inventory(i)==0 && ~success )
       success = true;
-      Player.inventory(i) = 0;
+      Player.inventory(i) = item_no;
       fprintf('%s gained a %s!\n\n', Player.name, item_db(item_no).name);
+      break;
     end
   end
   
