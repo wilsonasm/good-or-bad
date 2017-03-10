@@ -52,14 +52,14 @@ Utilizes:
 
 git pull
 
-<EDIT YOUR STUFF>
+%EDIT YOUR STUFF
 
-git pull <AGAIN>
+git pull %AGAIN
 
 git add --all
 
-git commit -m "<PUT MESSAGE HERE>"
+git commit -m "PUT MESSAGE HERE"
 
 git push
 
-<DONE>
+%DONE
