@@ -1,12 +1,12 @@
-function [next_event_id, player] = Disque_event(player, item_database)
-{
-  fprintf('As you travel along to the Great Hall of Disque you encounter a worry traveler\n"'
-  fprintf('You approach him and find out that his only gold has been stolen by a theif\n')
-  fprintf('He asks you, as a valiant knight, if you can retrieve his gold for him\n')
-  fprintf('Do you accept?\n Yes or No\n')
+function [next_event_id, player] = disque_event(player, item_database)
+
+  fprintf('As you travel along to the Great Hall of Disque you encounter a worry traveler\n');
+  fprintf('You approach him and find out that his only gold has been stolen by a theif\n');
+  fprintf('He asks you, as a valiant knight, if you can retrieve his gold for him\n');
+  fprintf('Do you accept?\n Yes or No\n');
   
   while( 1==1 )
-        answer = input('>>');
+        answer = input('>>', 's');
         
         if( strcmpi(answer, 'yes') )
             fprintf('Traveler: Thank you so much\n'); 
@@ -20,7 +20,6 @@ function [next_event_id, player] = Disque_event(player, item_database)
         else
             fprintf('Invalid input. Enter either yes or no.\n');
         end
-    end
-     
+  end
 
-}
+end

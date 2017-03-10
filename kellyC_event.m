@@ -1,5 +1,5 @@
 function [next_event_id, Player] = kellyC_event(Player, item_database)
-{
+
 fprintf('You reach Kelly Cave: a gruesome place filled with horror.\n')
 fprintf('You notcied a shimmering light far into the cave and\n')
 fprintf('you come o dicsover it is the gold. As you reclaim the gold\n')
@@ -8,7 +8,7 @@ fprintf('A giant slug stands in your way of your path.\n')
 r= rand()*100;
 if (r <50)
     
-Player.energy = Player.enery-4;
+Player.energy = Player.energy-4;
 fprintf('healthbar %s \n', Player.energy)
 fprintf('That fight took a great deal out of you, you are\n')
 fprintf('quite lucky to still be alive\n')
@@ -22,7 +22,7 @@ end;
 fprintf('But now that you have the gold will your eturn it to the traveler \n')
 fprintf('or keep it all to yourself?\n Keep or Give \n')
 dec= input('>>', 's');
-chance= rand()*5
+chance= rand()*5;
 
 if( strcmpi(dec, 'Keep')==1 )
 
@@ -43,7 +43,6 @@ end;
 
 end;
 
-
-
 next_event_id = 12;
-}
+
+end

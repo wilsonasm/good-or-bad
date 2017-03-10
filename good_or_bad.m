@@ -8,7 +8,10 @@
 first_event   id=0
 
 disque_event  id=10   //recruit route
+KellyC        id=11
+fightFH       id=12
 randell_event id=20
+mountainTop
 
 curtis_event  id=30   //mercenary route
 larry_event   id=32
@@ -64,7 +67,7 @@ while( event_id~=100 )
       event_fh= @kellyC_event;
     
     case 12
-      event_fh= @fightFH_event;
+      event_fh= @theFightFH_event;
     
     case 13
       event_fh= @theHunt_event;

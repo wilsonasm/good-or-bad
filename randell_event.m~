@@ -23,8 +23,7 @@ while (1==1)
         end
         break;
     elseif (strcmpi(dec, 'Walk')==1)
-        fprintf('Well, hero moments are not made for everyone. Lets continue on\n');
-        break;
+        fprintf('Well, hero moments are not made for everyone. Lets continue on\n')
     else
         fprintf('I am sorry, that is not a valid action.\n')
     end;
