@@ -2,22 +2,48 @@
 
 MATLAB text-interface rpg
 
-##storyline
+##To Use
+Open good_or_bad.m in MATLAB and run script (may need to add folder to path)
+
+##Storyline
 Setting: Medieval Times/ Fantasy
-\nItems: Magic potion, food, miscellaneous
-\nPlayer: Man (Good)/ Beast (Bad)
+
+Gameplay: includes items and autoresolved battles (through pseudorandom generator)
+
+Player: Judged on morality counter (good/bad), influenced by decisions
 
 
-Main Story Line: A valiant hero was taught a the chilvalry school of Drexel that this world has endless bounties, quests, and danger. Upon graduation the hero realizes that he has six paths to choose from that well either deem him wothy or praise, or sleep amongst the rats for his cruel acts.
-Shaumik's Tale:
-Quan's Tale:
-Markus' Tale: 
+##Description
+Have an energy bar, for every event you take, the enrgy bar goes down. You 
+can replenish with energy with food or certain items. Energy also decreases 
+when injured in battle. As player makes decisions he or she must balance
+between a good choice, bad choice, and energy. If energy hits zero player
+dies. 
+
+##Design
+Each major scenario in the game will be its own function, dubbed event. A
+function handle in the main code will point to the current event and will
+update the next event in each loop. Each team member will be assigned their
+own series of events to code.
+
+A player struct will hold information about the player, and will be passed
+on to events, as well as updated by events. 
+
+A struct array for items will also exist, that will effectively serve as a
+table for all possible items in the game.
+
+##Technical Aspects
+Utilizes:
+ - Structs (and struct arrays)
+ - Function handles
+ - Random number generator
+ - Loops
+ - String manipulation
 
 
-##design
-Have an energy bar, for every turn you take, the enrgy bar goes down. You can replenish with food or certain items
+##How to git
 
-#How to git
+(https link: https://github.com/wilsonasm/good-or-bad.git )
 
 git pull
 
