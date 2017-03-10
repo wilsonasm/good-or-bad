@@ -6,10 +6,11 @@ fprintf('IT is up to you, fair Knight, you you wish to relanquish the kingdom\n'
 fprintf('from their grasp or continue to walk away.\n')
 fprintf('Free or Walk\n')
 
-dec= input('>>', 's');
+
 
 life= rand()*50;
-
+while (1==1)
+dec= input('>>', 's');
 if (strcmpi(dec,'Free')==1)
 fprintf('I see you wish to test your skills\n')
 if life < 25
@@ -23,6 +24,8 @@ end;
 elseif (strcmpi(dec, 'Walk')==1)
 fprintf('Well, hero moments are not made for everyone. Lets continue on\n')
 else
-fprintf(
+fprintf('I am sorry, that is not a valid action.\n')
+end;
+end;
 next_event_id = 21;
 }
