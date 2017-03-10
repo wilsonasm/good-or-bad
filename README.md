@@ -5,6 +5,11 @@ MATLAB text-interface rpg
 ##To Use
 Open good_or_bad.m in MATLAB and run script (may need to add folder to path)
 
+##Authors
+ - Shaumik Ashraf
+ - Markus Wilson
+ - Quan Nguyen
+
 ##Storyline
 Setting: Medieval Times/ Fantasy
 
